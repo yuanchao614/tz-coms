@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tz_coms/tz_coms.dart';
-
 void main() {
   runApp(const MyApp());
 }
@@ -155,7 +154,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Container(
               margin: EdgeInsets.symmetric(horizontal: 16),
               child: TzHorizontalBar(
-                  dataList: [
+                  dataList: const [
                     {'label': '全部', 'value': 0},
                     {'label': '待支付', 'value': 1},
                     {'label': '已支付', 'value': 2},

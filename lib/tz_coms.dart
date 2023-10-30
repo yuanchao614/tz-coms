@@ -1,10 +1,6 @@
 library tz_coms;
 
-export 'src/widget/TzAvator.dart';
-export 'src/widget/TzModalBottomSheet.dart';
-export 'src/widget/TzStepNumber.dart';
-export 'src/widget/TzHorizontalBar.dart';
-export 'src/widget/TzDialog.dart';
+export 'src/widget.dart';
 // a
 
 /// A Calculator.
