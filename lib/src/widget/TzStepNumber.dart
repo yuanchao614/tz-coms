@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 // import 'package:yiju_flutter/util/toast.dart';
 
 //faith 2020年04月20日11:05:57
-class NumberControllerWidget extends StatefulWidget {
+class TzStepNumber extends StatefulWidget {
   //高度
   final double height;
   //输入框的宽度 总体宽度为自适应
@@ -28,7 +28,7 @@ class NumberControllerWidget extends StatefulWidget {
   final bool? enabled;
   List<TextInputFormatter>? inputFormatters;
 
-  NumberControllerWidget({
+  TzStepNumber({
     // required Key key,
     this.enabled = false,
     this.height = 30,
@@ -45,10 +45,10 @@ class NumberControllerWidget extends StatefulWidget {
     required this.updateValueChanged,
   });
   @override
-  _NumberControllerWidgetState createState() => _NumberControllerWidgetState();
+  _TzStepNumberState createState() => _TzStepNumberState();
 }
 
-class _NumberControllerWidgetState extends State<NumberControllerWidget> {
+class _TzStepNumberState extends State<TzStepNumber> {
   var textController = TextEditingController();
 
   void echoTextController(String value) {
@@ -75,7 +75,7 @@ class _NumberControllerWidgetState extends State<NumberControllerWidget> {
   }
 
   @override
-  void didUpdateWidget(NumberControllerWidget oldWidget) {
+  void didUpdateWidget(TzStepNumber oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (widget.echoValue != null && oldWidget.echoValue != widget.echoValue) {
       echoTextController(widget.echoValue);
@@ -85,6 +85,7 @@ class _NumberControllerWidgetState extends State<NumberControllerWidget> {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Container(
           height: widget.height,

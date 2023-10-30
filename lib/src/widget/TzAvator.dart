@@ -30,7 +30,9 @@ class _TzAvator extends State<TzAvator> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        widget.handleOnTap!();
+        if (widget.handleOnTap != null) {
+          widget.handleOnTap!();
+        }
       },
       child: Container(
         child: Card(
